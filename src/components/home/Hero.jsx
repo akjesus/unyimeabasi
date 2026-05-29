@@ -95,9 +95,10 @@ export default function Hero() {
               "
             >
               {" "}
-              <link to={"/research"}>
+              <Link to={"/research"}>
                 <button
                   className="
+                  cursor-pointer
                   bg-yellow-500
                   hover:bg-yellow-400
                   text-black
@@ -110,8 +111,8 @@ export default function Hero() {
                 >
                   View Publications
                 </button>
-              </link>
-              <link to={"/about"}>
+              </Link>
+              <Link to={"/about"}>
                 <button
                   className="
                   border
@@ -122,11 +123,12 @@ export default function Hero() {
                   py-4
                   rounded-2xl
                   transition-all
+                  cursor-pointer
                 "
                 >
-                 About Me
+                  About Me
                 </button>
-              </link>
+              </Link>
             </div>
           </motion.div>
 
