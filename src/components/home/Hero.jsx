@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import HeroSlider from "./HeroSlider";
 import AnimatedCounter from "./AnimatedCounter";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -93,8 +94,10 @@ export default function Hero() {
                 lg:justify-start
               "
             >
-              <button
-                className="
+              {" "}
+              <link to={"/research"}>
+                <button
+                  className="
                   bg-yellow-500
                   hover:bg-yellow-400
                   text-black
@@ -104,12 +107,13 @@ export default function Hero() {
                   font-semibold
                   transition-all
                 "
-              >
-                View Publications
-              </button>
-
-              <button
-                className="
+                >
+                  View Publications
+                </button>
+              </link>
+              <link to={"/about"}>
+                <button
+                  className="
                   border
                   border-white/20
                   hover:border-white
@@ -119,9 +123,10 @@ export default function Hero() {
                   rounded-2xl
                   transition-all
                 "
-              >
-                Book Consultation
-              </button>
+                >
+                 About Me
+                </button>
+              </link>
             </div>
           </motion.div>
 
