@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 export default function ConsultationModal({ open, onClose }) {
   const [form, setForm] = useState({
@@ -16,11 +17,20 @@ export default function ConsultationModal({ open, onClose }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     // TEMP: replace with API later
     console.log("Consultation Request:", form);
-
-    alert("Request submitted successfully!");
+    Swal.fire({
+      icon: "success",
+      title: "Request submitted successfully!",
+      text: "we will respond to your message soonest",
+      timer: 2000,
+    });
+    setForm({
+      name: "",
+      email: "",
+      message: "",
+      type: "Legal Consultation",
+    });
     onClose();
   };
 
