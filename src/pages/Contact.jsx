@@ -1,10 +1,9 @@
-import useDocumentTitle from "../hooks/useDocumentTitle";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 export default function Contact() {
-  useDocumentTitle("Contact | UnyimeAbasi");
+  useDocumentTitle("About | UnyimeAbasi");
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -26,10 +25,11 @@ export default function Contact() {
   return (
     <div className="bg-white">
       {/* HERO */}
-      <section className="bg-slate-50 py-24 sm:py-28">
+      <section className="py-24 sm:py-28 bg-slate-50">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             className="text-yellow-600 uppercase tracking-[4px] text-sm font-semibold"
           >
             Contact
@@ -37,9 +37,10 @@ export default function Contact() {
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl sm:text-5xl font-bold text-slate-900 mt-4"
           >
-            Get in Touch
+            Got questions or want to connect with me?
           </motion.h1>
 
           <p className="text-gray-600 mt-6 max-w-3xl mx-auto text-lg">
@@ -51,11 +52,11 @@ export default function Contact() {
 
       {/* CONTACT SECTION */}
       <section className="py-24">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12">
+        <div className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8 space-y-10">
           {/* FORM */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             className="
               bg-white
               border border-gray-200
@@ -101,7 +102,7 @@ export default function Contact() {
               <textarea
                 name="message"
                 placeholder="Your Message..."
-                rows="5"
+                rows="6"
                 value={form.message}
                 onChange={handleChange}
                 className="w-full border border-gray-200 rounded-xl p-3 focus:border-yellow-500 outline-none resize-none"
@@ -125,50 +126,20 @@ export default function Contact() {
             </form>
           </motion.div>
 
-          {/* INFO PANEL */}
+          {/* MAP ONLY */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            className="space-y-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="
+              bg-slate-100
+              rounded-2xl
+              h-72
+              flex items-center justify-center
+              text-gray-500
+              border border-gray-200
+            "
           >
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-              <div className="flex items-center gap-3 mb-3">
-                <Mail className="text-yellow-600" />
-                <h3 className="font-semibold text-slate-900">Email</h3>
-              </div>
-              <p className="text-gray-600">contact@legalresearch.ca</p>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-              <div className="flex items-center gap-3 mb-3">
-                <Phone className="text-yellow-600" />
-                <h3 className="font-semibold text-slate-900">Phone</h3>
-              </div>
-              <p className="text-gray-600">+1 (000) 000-0000</p>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-              <div className="flex items-center gap-3 mb-3">
-                <MapPin className="text-yellow-600" />
-                <h3 className="font-semibold text-slate-900">Location</h3>
-              </div>
-              <p className="text-gray-600">
-                Toronto, Canada (Remote consultations available)
-              </p>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-              <div className="flex items-center gap-3 mb-3">
-                <Clock className="text-yellow-600" />
-                <h3 className="font-semibold text-slate-900">Working Hours</h3>
-              </div>
-              <p className="text-gray-600">Mon - Fri: 9:00 AM - 6:00 PM</p>
-            </div>
-
-            {/* MAP PLACEHOLDER */}
-            <div className="bg-slate-100 rounded-2xl h-48 flex items-center justify-center text-gray-500">
-              Map / Office Location
-            </div>
+            Map / Office Location (Toronto, Canada)
           </motion.div>
         </div>
       </section>
