@@ -89,10 +89,10 @@ export default function Navbar({ onOpenConsult }) {
               ))}
             </nav>
 
-            {/* CTA */}
+            {/* CTA (Desktop only) */}
             <button
               onClick={onOpenConsult}
-              className="bg-yellow-500 hover:bg-yellow-400 transition px-5 py-3 rounded-xl font-semibold cursor-pointer"
+              className="hidden lg:block bg-yellow-500 hover:bg-yellow-400 transition px-5 py-3 rounded-xl font-semibold cursor-pointer"
             >
               Book Consultation
             </button>
@@ -126,7 +126,10 @@ export default function Navbar({ onOpenConsult }) {
                   Contact
                 </Link>
 
-                <button className="bg-yellow-500 py-3 rounded-xl font-semibold mt-2">
+                <button
+                  onClick={onOpenConsult}
+                  className="bg-yellow-500 py-3 rounded-xl font-semibold mt-2"
+                >
                   Book Consultation
                 </button>
               </nav>
