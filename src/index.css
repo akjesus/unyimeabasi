@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Exo", sans-serif;
+  overflow-x: hidden;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+/* Better image rendering */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+  background: white !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+html,
+body,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  width: 100%;
+}
