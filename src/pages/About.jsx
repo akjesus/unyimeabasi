@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { Scale, BookOpen, Globe, Award } from "lucide-react";
+import {
+  Scale,
+  BookOpen,
+  Globe,
+  Award,
+  BadgeCheck,
+  GraduationCap,
+} from "lucide-react";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
 const timeline = [
@@ -50,6 +57,28 @@ const impacts = [
     desc: "Acknowledged for contributions in policy reform and legal research.",
   },
 ];
+const certifications = [
+  {
+    icon: Award,
+    title: "Certified Information Privacy Professional/ Canada (CIPP/C)",
+    issuer: "International Association of Privacy Professionals (IAPP)",
+  },
+  {
+    icon: BadgeCheck,
+    title: " Certified Information Privacy Manager (CIPM), 2024",
+    issuer: "International Association of Privacy Professionals (IAPP)",
+  },
+  {
+    icon: GraduationCap,
+    title: "International Diploma in Governance, Risk and Compliance, 2024",
+    issuer: "International Credential Assessment Service of Canada (ICAS)",
+  },
+  {
+    icon: Award,
+    title: "Certified AML Fintech Compliance Associate (CAFCA), 2024",
+    issuer: "Association Of Certified Anti-Money Laundering Specialists",
+  },
+];
 
 export default function About() {
   useDocumentTitle("About | UnyimeAbasi");
@@ -63,7 +92,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-yellow-600 uppercase tracking-[4px] text-sm font-semibold"
           >
-            About
+            About Me
           </motion.p>
 
           <motion.h1
@@ -71,13 +100,14 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl sm:text-5xl font-bold text-slate-900 mt-4"
           >
-            Legal Scholar, Researcher & Policy Advisor
+            My Story in Law & Research
           </motion.h1>
 
           <p className="text-gray-600 mt-6 max-w-3xl mx-auto text-lg">
-            A Canada-based legal professional specializing in human rights law,
-            international governance, and policy research with a strong academic
-            and practical background.
+            I’m UnyimeAbasi Odong, a lawyer, scholar, and policy expert
+            currently studying for my PhD at the University of Ottawa. My
+            research focuses on the intersections of finance, platforms,
+            technology and the law.
           </p>
         </div>
       </section>
@@ -103,24 +133,112 @@ export default function About() {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
           >
-            <h2 className="text-3xl font-bold text-slate-900 mb-5">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">
               Professional Biography
             </h2>
 
-            <p className="text-gray-600 leading-relaxed mb-5">
-              With a strong foundation in both academic research and practical
-              legal work, I focus on bridging the gap between law, policy, and
-              real-world governance challenges. My work spans across
-              international law, human rights advocacy, and institutional
-              reform.
+            <div className="space-y-5 text-gray-600 leading-relaxed">
+              <p>
+                I am UnyimeAbasi, a lawyer, scholar and policy expert working
+                and researching at the intersection of law, technology, and
+                society. My research is driven by a curiosity about the
+                creation, legitimization, allocation, and transfer of value, and
+                how to make finance work better. This is gaining even greater
+                relevance at this time as artificial intelligence, digitization
+                of finance, geopolitical shifts, and an increasingly fragmented
+                global economy create a complex and rapidly shifting financial
+                ecosystem As an innovative and curious scholar, my engagement
+                with technology prompts a close examination of how law,
+                technology, and social values interact – and the outcomes of
+                those dynamics. My commitment to the idea that technology should
+                make our lives better, drives and underpins my research
+                endeavors.
+              </p>
+
+              <p>
+                My research, anchored in strong theoretical foundations and with
+                practical value in real world situations, question assumptions
+                and contributes to building responsible finance and technology,
+                and to helping policy makers, business leaders, investors, and
+                the public. I have published and presented my scholarship and
+                policy contributions both nationally and internationally on
+                various issues including the regulatory requirements of
+                sandboxes for (financial) technologies, the implications of FATF
+                rules on digital assets for the global majority, and regulatory
+                networks for cross-border, cross-sectoral regulation of digital
+                assets. As a lawyer, my career has spanned litigation, advisory,
+                and consulting practice. I have prepared briefs and appeared
+                before superior courts of record, handling complex
+                constitutional and international law matters, and frequently
+                providing counsel on regulatory and policy-related proposals.
+              </p>
+
+              <p>
+                Outside of academia and the law, I have worked with several
+                organizations on regulatory issues. I am currently the Vice
+                Chairperson of the Board of Directors of Heartwood House, where
+                I contribute to governance and policies.
+              </p>
+
+              <p>
+                I am a fellow at the Africa Fintech Network where I am working
+                on regional initiatives to bring foster collaboration and
+                promote financial inclusion within Africa’s Fintech Ecosystem. I
+                am also a Student Member of the Human Rights Research and
+                Education Centre ( HRREC) and the Centre for Law Technology and
+                Society of the University of Ottawa. I was called to the Bar in
+                Nigeria in 2007, and to the Ontario Bar in 2022.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      <section className="bg-slate-50 py-24 sm:py-28">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          {/* HEADER */}
+          <div className="text-center mb-14">
+            <p className="text-yellow-600 uppercase tracking-[4px] text-sm font-semibold">
+              Credentials
             </p>
 
-            <p className="text-gray-600 leading-relaxed">
-              Over the years, I have contributed to peer-reviewed journals,
-              advised policy institutions, and worked with organizations focused
-              on justice reform and global governance systems.
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-3">
+              Certifications & Professional Development
+            </h2>
+
+            <p className="text-gray-600 mt-5 max-w-3xl mx-auto">
+              Continuous professional development through advanced legal,
+              policy, and research-focused training programs.
             </p>
-          </motion.div>
+          </div>
+
+          {/* GRID */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
+            {certifications.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05 }}
+                className="
+                bg-white
+                border border-gray-200
+                rounded-2xl
+                p-6 sm:p-8
+                shadow-sm
+                hover:shadow-md
+                transition
+              "
+              >
+                <item.icon className="text-yellow-600 mb-5" size={30} />
+
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-600 text-sm">{item.issuer}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

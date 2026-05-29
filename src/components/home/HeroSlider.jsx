@@ -116,7 +116,7 @@ export default function HeroSlider() {
                           transition
                         "
                         >
-                          COntact Me
+                          Contact Me
                         </button>
                       </Link>
                     </div>
