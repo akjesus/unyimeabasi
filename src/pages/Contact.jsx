@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import useDocumentTitle from "../hooks/useDocumentTitle";
+import Swal from "sweetalert2"
 
 export default function Contact() {
   useDocumentTitle("About | UnyimeAbasi");
@@ -19,7 +20,18 @@ export default function Contact() {
     e.preventDefault();
 
     console.log("Contact Form:", form);
-    alert("Message sent successfully!");
+    Swal.fire({
+      icon:"success",
+      title: "Message Sent Successfully!",
+      text: "We will get back to you soonest!",
+      timer: 2000,
+    });
+    setForm({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
   };
 
   return (

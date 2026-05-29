@@ -92,7 +92,7 @@ export default function About() {
             className="relative"
           >
             <img
-              src="/images/about.jpg"
+              src="/sliders/1.png"
               alt="About"
               className="rounded-3xl shadow-lg w-full h-[450px] object-cover"
             />

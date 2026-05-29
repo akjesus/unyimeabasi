@@ -48,17 +48,19 @@ export default function Blog() {
   return (
     <div className="bg-white">
       {/* HERO */}
-      <section className="bg-slate-50 py-24 sm:py-28">
+      <section className="py-24 sm:py-28 bg-slate-50">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             className="text-yellow-600 uppercase tracking-[4px] text-sm font-semibold"
           >
-            Insights
+            Blog Posts
           </motion.p>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl sm:text-5xl font-bold text-slate-900 mt-4"
           >
             Research & Legal Insights Blog
@@ -70,7 +72,6 @@ export default function Blog() {
           </p>
         </div>
       </section>
-
       {/* FEATURED ARTICLE */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
