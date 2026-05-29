@@ -139,9 +139,7 @@ export default function About() {
 
             <div className="space-y-5 text-gray-600 leading-relaxed">
               <p>
-                I am UnyimeAbasi, a lawyer, scholar and policy expert working
-                and researching at the intersection of law, technology, and
-                society. My research is driven by a curiosity about the
+                My research is driven by a curiosity about the
                 creation, legitimization, allocation, and transfer of value, and
                 how to make finance work better. This is gaining even greater
                 relevance at this time as artificial intelligence, digitization

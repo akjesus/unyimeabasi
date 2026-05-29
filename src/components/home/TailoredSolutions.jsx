@@ -35,7 +35,7 @@ export default function TailoredSolutions() {
           className="text-center mb-14"
         >
           <p className="text-yellow-400 uppercase tracking-[4px] text-sm font-semibold">
-            What We Offer
+            What I Offer
           </p>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-3">

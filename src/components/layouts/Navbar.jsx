@@ -107,24 +107,16 @@ export default function Navbar({ onOpenConsult }) {
           {open && (
             <div className="lg:hidden pb-6">
               <nav className="flex flex-col gap-5 font-medium">
-                <Link to="/" onClick={() => setOpen(false)}>
-                  Home
-                </Link>
-                <Link to="/about" onClick={() => setOpen(false)}>
-                  About
-                </Link>
-                <Link to="/research" onClick={() => setOpen(false)}>
-                  Research
-                </Link>
-                <Link to="/practice" onClick={() => setOpen(false)}>
-                  Practice
-                </Link>
-                <Link to="/blog" onClick={() => setOpen(false)}>
-                  Blog
-                </Link>
-                <Link to="/contact" onClick={() => setOpen(false)}>
-                  Contact
-                </Link>
+                {navLinks.map((link, index) => (
+                  <NavLink
+                    key={index}
+                    to={link.link}
+                    className={linkClass}
+                    onClick={() => setOpen(false)}
+                  >
+                    {link.name}
+                  </NavLink>
+                ))}
 
                 <button
                   onClick={onOpenConsult}
